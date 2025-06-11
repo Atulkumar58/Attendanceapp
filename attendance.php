@@ -22,7 +22,7 @@ else{
     <div class="page">
         <div class="header-area">
             <div class="logo-area"><h1 class="logo">ATTENDANCE APP</h1></div>
-            <div class="logout-area"><button class="btnlogout">LOGOUT</button></div>
+            <div class="logout-area"><button id="btnlogout" class="btnlogout">LOGOUT</button></div>
         </div>
 
         <div class="session-area">

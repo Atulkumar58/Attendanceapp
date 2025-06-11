@@ -1,5 +1,5 @@
 $(function(e){
-    $(document).on("click", "#btnLogout", function(ee){
+    $(document).on("click", "#btnlogout", function(ee){
         $.ajax (
             {
                 url:"AjaxHandler/logoutAjax.php",
@@ -7,7 +7,7 @@ $(function(e){
                 dataType:"json",
                 data:{id:1},
                 beforeSend:function(e){
-
+                    
                 },
                 success: function(e){
                     document.location.replace("login.php");
@@ -19,3 +19,4 @@ $(function(e){
         )
     });
 });
+
