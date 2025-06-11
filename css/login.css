@@ -1,0 +1,90 @@
+.loginform{
+    margin: 20px;
+    background-image: radial-gradient(skyblue, lightblue);
+    width: min(600px, 95%);
+    height: 500px;
+    border: solid 2px gray ;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+   
+}
+.loginform:hover{
+    box-shadow: 0 0 500px gray;
+    transform: scale(0.99);
+}
+
+body{
+    height: 100vh;
+    /* background-color: rgb(59, 171, 153); */
+    background-image: linear-gradient(black, gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#heading{
+    text-align: center;
+    font-size:larger;
+    color: rgb(180, 26, 21);
+    font-family:'Times New Roman', Times, serif;
+    height: 30px;
+    
+}
+
+button{
+   
+    background-color: rgb(224, 61, 24);
+    width:50%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inp{
+  
+    align-items: center;
+    
+    height: 150px;
+}
+
+#username, #password{
+    height: 30px;
+    font-size: larger;
+     border: solid 1px black;
+    
+    
+}
+#username:hover, #password:hover{
+    color:darkblue;
+    box-shadow: 0 0 10px whitesmoke;
+    transform:scale3d(1.01, 1.01, 0.9);
+}
+.tag{
+    font-size: 3vh;
+    color: rgb(180, 26, 21);
+}
+
+.errordiv{
+
+    background-color: brown;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+   
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+.applyerrordiv{
+    visibility: visible;
+    opacity: 1;
+    animation: falldown 2s linear;
+}
+@keyframes falldown {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
