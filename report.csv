@@ -1,0 +1,17 @@
+Session:,"2024 SPRING SEMESTER"
+Course:,"CS670-ARTIFICIAL INTELLIGENCE"
+Faculty:,"Ram Charan Baishya"
+total,1
+start,2026-01-27
+end,2026-01-27
+slno,roll_no,name,2026-01-27,attended,percent
+1,CSB21002,"Emily Smith",P,1,100
+2,CSB21003,"Ryan Thompson",A,0,0
+3,CSB21007,"Matthew Davis",P,1,100
+4,CSB21010,"Sarah Taylor",A,0,0
+5,CSM21002,"Isabella Rodriguez",A,0,0
+6,CSM21003,"Ethan Martinez",P,1,100
+7,CSM21005,"Mason Lopez",P,1,100
+8,CSM21007,"Alexander Gonzalez",A,0,0
+9,CSM21009,"William Martinez",P,1,100
+10,CSM21012,"Emma Hernandez",A,0,0

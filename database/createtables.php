@@ -4,11 +4,13 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 require_once $path . "/attendanceapp/database/database.php";
 function clearTable($dbo, $tabName)
 {
-  $c = "delete from :tabname";
+  $c = "delete from ".$tabName;
   $s = $dbo->conn->prepare($c);
   try {
-    $s->execute([":tabname" => $tabName]);
+    $s->execute();
+    echo($tabName." cleared");
   } catch (PDOException $oo) {
+    echo($oo->getMessage());
   }
 }
 $dbo = new Database();
@@ -16,7 +18,8 @@ $c = "create table student_details
 (
     id int auto_increment primary key,
     roll_no varchar(20) unique,
-    name varchar(50)
+    name varchar(50),
+    email_id varchar(100)
 )";
 $s = $dbo->conn->prepare($c);
 try {
@@ -89,6 +92,7 @@ try {
 } catch (PDOException $o) {
   echo ("<br>course_registration not created");
 }
+clearTable($dbo, "course_registration");
 
 $c = "create table course_allotment
 (
@@ -104,6 +108,7 @@ try {
 } catch (PDOException $o) {
   echo ("<br>course_allotment not created");
 }
+clearTable($dbo, "course_allotment");
 
 $c = "create table attendance_details
 (
@@ -122,34 +127,57 @@ try {
 } catch (PDOException $o) {
   echo ("<br>attendance_details not created");
 }
+clearTable($dbo, "attendance_details");
 
+$c = "create table sent_email_details
+(
+    faculty_id int,
+    course_id int,
+    session_id int,
+    student_id int,
+    on_date date,
+    id int auto_increment primary key,
+    message varchar(200),
+    to_email varchar(100)
+)";
+$s = $dbo->conn->prepare($c);
+try {
+  $s->execute();
+  echo ("<br>sent_email_details created");
+} catch (PDOException $o) {
+  echo ("<br>sent_email_details not created");
+}
+clearTable($dbo, "sent_email_details");
+
+clearTable($dbo, "student_details");
 $c = "insert into student_details
-(id,roll_no,name)
+(id,roll_no,name,email_id)
 values
-(1,'CSB21001','Emily Johnson'),
-(2,'CSB21002','Michael Smith'),
-(3,'CSB21003','Sarah Martinez'),
-(4,'CSB21004','David Brown'),
-(5,'CSB21005','Olivia Williams'),
-(6,'CSB21006','Christopher Davis'),
-(7,'CSB21007','Sophia Wilson'),
-(8,'CSB21008','Ethan Anderson'),
-(9,'CSB21009','Emma Miller'),
-(10,'CSB21010','James Jones'),
-(11,'CSB21011','Ava Taylor'),
-(12,'CSB21012','Daniel Thomas'),
-(13,'CSM21001','Mia Garcia'),
-(14,'CSM21002','William White'),
-(15,'CSM21003','Chloe Martin'),
-(16,'CSM21004','Benjamin Clark'),
-(17,'CSM21005','Isabella Hall'),
-(18,'CSM21006','Alexander Lee'),
-(19,'CSM21007','Grace Lewis'),
-(20,'CSM21008','Samuel Turner'),
-(21,'CSM21009','Natalie Harris'),
-(22,'CSM21010','Caleb Baker'),
-(23,'CSM21011','Lily Reed'),
-(24,'CSM21012','Logan Murphy')
+(1,'CSB21001','Alexy Johnson','abc@gmail.com'),
+(2,'CSB21002','Emily Smith','abc@gmail.com'),
+(3,'CSB21003','Ryan Thompson','abc@gmail.com'),
+(4,'CSB21004','Sophia Williams','abc@gmail.com'),
+(5,'CSB21005','Daniel Brown','abc@gmail.com'),
+(6,'CSB21006','Olivia Jones','abc@gmail.com'),
+(7,'CSB21007','Matthew Davis','abc@gmail.com'),
+(8,'CSB21008','Emma Miller','abc@gmail.com'),
+(9,'CSB21009','David Wilson','abc@gmail.com'),
+(10,'CSB21010','Sarah Taylor','abc@gmail.com'),
+(11,'CSB21011','Michael Martinez','abc@gmail.com'),
+(12,'CSB21012','Ava Anderson','abc@gmail.com'),
+
+(13,'CSM21001','Liam Garcia','abc@gmail.com'),
+(14,'CSM21002','Isabella Rodriguez','abc@gmail.com'),
+(15,'CSM21003','Ethan Martinez','abc@gmail.com'),
+(16,'CSM21004','Olivia Hernandez','abc@gmail.com'),
+(17,'CSM21005','Mason Lopez','abc@gmail.com'),
+(18,'CSM21006','Sophia Perez','abc@gmail.com'),
+(19,'CSM21007','Alexander Gonzalez','abc@gmail.com'),
+(20,'CSM21008','Ava Johnson','abc@gmail.com'),
+(21,'CSM21009','William Martinez','abc@gmail.com'),
+(22,'CSM21010','Emily Brown','abc@gmail.com'),
+(23,'CSM21011','James Rodriguez','abc@gmail.com'),
+(24,'CSM21012','Emma Hernandez','abc@gmail.com')
 ";
 
 $s = $dbo->conn->prepare($c);
@@ -159,7 +187,7 @@ try {
   echo ("<br>duplicate entry");
 }
 
-
+clearTable($dbo, "faculty_details");
 $c = "insert into faculty_details
 (id,user_name,password,name)
 values
@@ -177,12 +205,13 @@ try {
   echo ("<br>duplicate entry");
 }
 
-
+clearTable($dbo, "session_details");
 $c = "insert into session_details
 (id,year,term)
 values
 (1,2023,'SPRING SEMESTER'),
-(2,2023,'AUTUMN SEMESTER')";
+(2,2023,'AUTUMN SEMESTER'),
+(3,2024,'SPRING SEMESTER')";
 
 $s = $dbo->conn->prepare($c);
 try {
@@ -191,7 +220,7 @@ try {
   echo ("<br>duplicate entry");
 }
 
-
+clearTable($dbo, "course_details");
 $c = "insert into course_details
 (id,title,code,credit)
 values
@@ -236,6 +265,15 @@ for ($i = 1; $i <= 24; $i++) {
       $s->execute([":sid" => $i, ":cid" => $cid, ":sessid" => 2]);
     } catch (PDOException $pe) {
     }
+
+    //repeat for session 3
+    $cid = rand(1, 6);
+    //insert the selected course into course_registration table for 
+    //session 2 and student_id $i
+    try {
+      $s->execute([":sid" => $i, ":cid" => $cid, ":sessid" => 3]);
+    } catch (PDOException $pe) {
+    }
   }
 }
 
@@ -266,6 +304,15 @@ for ($i = 1; $i <= 6; $i++) {
     //session 2 and student_id $i
     try {
       $s->execute([":fid" => $i, ":cid" => $cid, ":sessid" => 2]);
+    } catch (PDOException $pe) {
+    }
+
+    //repeat for session 3
+    $cid = rand(1, 6);
+    //insert the selected course into course_allotment table for 
+    //session 2 and student_id $i
+    try {
+      $s->execute([":fid" => $i, ":cid" => $cid, ":sessid" => 3]);
     } catch (PDOException $pe) {
     }
   }
