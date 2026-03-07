@@ -1,6 +1,7 @@
 
 /*
 I will need this templet many times ahead
+for making ajax call
 $.ajax({
         url:"ajaxhandler/attendanceAJAX.php",
         type:"POST",

@@ -7,38 +7,40 @@
 
 body{
     height:100vh;
-    /* background-color: rgb(19, 20, 19); */
+    background-color: #0f172a;   /* dark modern background */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .loginform
 {
     width:min(450px,95%);
     height: 580px;
-    border:solid 1px blue;
+    border:solid 1px #6366f1;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:transparent;
+    background-color:#1e293b;
     border-radius:10px;
     transition: all 1s;
 }
 
 .loginform:hover{
-    box-shadow: 0 0 10px 0px rgb(121, 97, 239),0 0 40px 10px rgb(121, 97, 239);
+    box-shadow: 0 0 10px 0px #6366f1,0 0 40px 10px #6366f1;
     animation: blink 1s infinite;
-    background-color: rgb(47, 45, 45);
+    background-color: #1e293b;
 }
+
 @keyframes blink {
     0%,100%{
-        box-shadow: 0 0 100px 0px rgb(121, 97, 239),0 0 400px 10px rgb(121, 97, 239);
+        box-shadow: 0 0 100px 0px #6366f1,0 0 400px 10px #6366f1;
     }
     40%,50%,60%
     {
-        box-shadow: 0 0 50px 0px rgb(121, 97, 239),0 0 100px 0px rgb(121, 97, 239);
+        box-shadow: 0 0 50px 0px #6366f1,0 0 100px 0px #6366f1;
     }
 }
 
@@ -59,8 +61,8 @@ body{
     border-left:none;
     border-right:none;
     border-top:none;
-    border-bottom:solid 1px red;
-    color:white;
+    border-bottom:solid 1px #64748b;
+    color:#f1f5f9;
     font-size: 20px;
     transition: all 200ms;
 }
@@ -69,7 +71,7 @@ body{
 {
     position:absolute;
     transition: all 200ms;
-    color:red;
+    color:#94a3b8;
 }
 
 .inputgroup input:hover +label,
@@ -77,14 +79,15 @@ body{
 .inputgroup input:valid +label
 {
     transform: translateY(-20px);
-    color:rgb(0, 85, 255);
+    color:#38bdf8;
 }
+
 .inputgroup input:hover ,
 .inputgroup input:focus ,
 .inputgroup input:valid 
 {
     
-    border-bottom:solid 1px rgb(0, 85, 255);
+    border-bottom:solid 1px #38bdf8;
 }
 
 .topmargin{
@@ -102,9 +105,10 @@ body{
     justify-content: end;
     align-items: center;
 }
+
 .btnlogin
 {
-    border:solid 1px blue;
+    border:solid 1px #38bdf8;
     width:150px;
     height:45px;
     padding:5px;
@@ -113,23 +117,26 @@ body{
     color:white;
     transition: all 200ms;
 }
+
 .btnlogin:hover{
-    box-shadow: 0 0 100px rgb(242, 88, 201);
+    box-shadow: 0 0 100px #22d3ee;
     transform: translateY(-5px);
 }
+
 .inactivecolor
 {
-    background-color: rgb(190, 22, 22);
+    background-color: #ef4444;
 }
+
 .activecolor
 {
-    background-color: rgb(50, 168, 247);
+    background-color: #0ea5e9;
 }
 
 .diverror
 {
     background-color: transparent;
-    color:white;
+    color:#f87171;
     height:45px;
     width:85%;
 
@@ -141,12 +148,14 @@ body{
     transition: all 1s;
     letter-spacing: 1px;
 }
+
 .applyerrordiv
 {
     visibility: visible;
     opacity: 1;
     animation:falldown 1s linear;
 }
+
 @keyframes falldown {
     0%{opacity: 0;transform: translateY(-100px);}
     49%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}

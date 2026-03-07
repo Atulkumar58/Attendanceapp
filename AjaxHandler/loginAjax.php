@@ -21,7 +21,7 @@ if(!empty($action))
             session_start();
             $_SESSION['current_user']=$rv['id'];
           }
-          for($i=0;$i<100000;$i++)
+          for($i=0;$i<10;$i++)
           {
             for($j=0;$j<2000;$j++)
             {

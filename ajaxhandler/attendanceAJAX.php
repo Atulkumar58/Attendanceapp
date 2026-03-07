@@ -5,6 +5,7 @@ require_once $path."/attendanceapp/database/sessionDetails.php";
 require_once $path."/attendanceapp/database/facultyDetails.php";
 require_once $path."/attendanceapp/database/courseRegistrationDetails.php";
 require_once $path."/attendanceapp/database/attendanceDetails.php";
+
 function createCSVReport($list,$filename)
 {
     $error=0;
@@ -34,6 +35,7 @@ if(isset($_REQUEST['action']))
          $rv=$sobj->getSessions($dbo);
          //getSessions
          //$rv=["2023 SPRING","2023 AUTUMN"];
+         
          echo json_encode($rv);
     }
     //data:{facid:facid,sessionid:sessionid,action:"getFacultyCourses"},

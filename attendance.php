@@ -20,13 +20,12 @@ session_start();
     <title>AttendanceApp</title>
 </head>
 <body>
-    <!--<h1>Hello</h1>     
-    <button id="btnLogout">LOGOUT</button>-->
      <div class="page">
         <div class="header-area">
             <div class="logo-area"> <h2 class="logo">School Attendance</h2></div>
             <div class="logout-area"><button class="button" id="btnLogout">LOGOUT</button></div>
         </div>
+        
         <div class="session-area">
               <div class="label-area"><label>SESSION</label></div>
               <div class="dropdown-area">
@@ -49,80 +48,9 @@ session_start();
         </div>
 
         <div class="classdetails-area" id="classdetailsarea">
-            <!--<div class="classdetails">
-                <div class="code-area">CS101</div>
-                <div class="title-area">INTRODUCTION TO SCIENTIFIC COMPUTING</div>
-                <div class="ondate-area">
-                    <input type="date">
-                </div>
-            </div>-->
         </div>
         
         <div class="studentlist-area" id="studentlistarea">
-            <!--<div class="studenttlist"><label>STUDENT LIST</label></div>
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">CSB21001</div>
-                <div class="name-area">PRAKASH KUMAR CHAUHAN</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
-           -->
            
         </div>
 
