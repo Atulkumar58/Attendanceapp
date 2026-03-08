@@ -88,7 +88,7 @@ interface.
 
 ## 📋 Student Records
 
-![Students](screenshots/students.png)
+![screenshots/students.png](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224650.png)
 
 Allows administrators to manage and maintain student data.
 
