@@ -70,7 +70,7 @@ the system.
 
 ## 📊 Dashboard
 
-![Dashboard](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224409.png)
+![Dashboard](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224340.png)
 
 The dashboard provides an overview of the system and quick access to
 attendance management features.
@@ -79,7 +79,7 @@ attendance management features.
 
 ## 📝 Mark Attendance
 
-![Attendance](screenshots/attendance.png)
+![Attendance](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224409.png)
 
 Faculty members can easily mark attendance for students using a simple
 interface.
