@@ -90,6 +90,15 @@ interface.
 ![Defaulters](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224439.png)
 
 This page displays students whose attendance is below the required threshold.
+
+------------------------------------------------------------------------
+
+✉️ Automatic Email Generation
+
+![Email](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20232323.png)
+
+The system sends an automatic warning email to students with low attendance.
+
 ------------------------------------------------------------------------
 
 ## 📋 Student Records
