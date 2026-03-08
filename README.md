@@ -85,9 +85,15 @@ Faculty members can easily mark attendance for students using a simple
 interface.
 
 ------------------------------------------------------------------------
+⚠️ Defaulter List
+
+![Defaulters](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224340.png)
+
+This page displays students whose attendance is below the required threshold.
+------------------------------------------------------------------------
 
 ## 📋 Student Records
-![screenshots/summary.png].(https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224558.png)
+
 ![screenshots/students.png](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224650.png)
 
 Allows administrators to manage and maintain student data.
