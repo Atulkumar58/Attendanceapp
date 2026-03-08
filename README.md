@@ -87,7 +87,7 @@ interface.
 ------------------------------------------------------------------------
 ⚠️ Defaulter List
 
-![Defaulters](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224340.png)
+![Defaulters](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224439.png)
 
 This page displays students whose attendance is below the required threshold.
 ------------------------------------------------------------------------
