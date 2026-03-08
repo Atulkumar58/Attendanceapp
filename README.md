@@ -70,7 +70,7 @@ the system.
 
 ## 📊 Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224409.png)
 
 The dashboard provides an overview of the system and quick access to
 attendance management features.
