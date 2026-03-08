@@ -61,7 +61,7 @@ and view attendance history easily.
 
 ## 🔐 Login Page
 
-![Login Page](screenshots/login.png)
+![Login Page](Screenshot 2026-03-08 224323.png)
 
 This page allows authorized faculty/admin users to securely log in to
 the system.
