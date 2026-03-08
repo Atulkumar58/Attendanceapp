@@ -61,7 +61,7 @@ and view attendance history easily.
 
 ## 🔐 Login Page
 
-([Screenshot 2026-03-08 224323.png](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224323.png))
+![Screenshot 2026-03-08 224323.png](https://github.com/Atulkumar58/Attendanceapp/blob/main/Screenshot%202026-03-08%20224323.png)
 
 This page allows authorized faculty/admin users to securely log in to
 the system.
