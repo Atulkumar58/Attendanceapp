@@ -75,6 +75,56 @@ class faculty_details
           }
           return $name;
     }
+    public function signupFaculty($dbo,$un,$email,$name,$department,$pw)
+    {
+        $rv=["status"=>"ERROR","message"=>"Registration failed"];
+        
+        //Check if username already exists
+        $c="select id from faculty_details where user_name=:un";
+        $s=$dbo->conn->prepare($c);
+        try{
+            $s->execute([":un"=>$un]);
+            if($s->rowCount()>0)
+            {
+                return ["status"=>"ERROR","message"=>"Username already exists"];
+            }
+        }
+        catch(PDOException $e){
+            return $rv;
+        }
+        
+        //Check if email already exists
+        $c="select id from faculty_details where email=:email";
+        $s=$dbo->conn->prepare($c);
+        try{
+            $s->execute([":email"=>$email]);
+            if($s->rowCount()>0)
+            {
+                return ["status"=>"ERROR","message"=>"Email already registered"];
+            }
+        }
+        catch(PDOException $e){
+            return $rv;
+        }
+        
+        //Insert new faculty
+        $c="insert into faculty_details (user_name, email, name, department, password) 
+           values (:un, :email, :name, :dept, :pw)";
+        $s=$dbo->conn->prepare($c);
+        try{
+            $s->execute([
+                ":un"=>$un,
+                ":email"=>$email,
+                ":name"=>$name,
+                ":dept"=>$department,
+                ":pw"=>$pw
+            ]);
+            return ["status"=>"SUCCESS","message"=>"Registration successful. Please login."];
+        }
+        catch(PDOException $e){
+            return ["status"=>"ERROR","message"=>"Database error: ".$e->getMessage()];
+        }
+    }
 }
 ?>
 

@@ -49,7 +49,9 @@ $c = "create table faculty_details
 (
     id int auto_increment primary key,
     user_name varchar(20) unique,
+    email varchar(100) unique,
     name varchar(100),
+    department varchar(100),
     password varchar(50)
 )";
 $s = $dbo->conn->prepare($c);

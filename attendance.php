@@ -17,13 +17,17 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/attendance.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>AttendanceApp</title>
+    <title>School Attendance - Dashboard</title>
 </head>
 <body>
      <div class="page">
         <div class="header-area">
-            <div class="logo-area"> <h2 class="logo">School Attendance</h2></div>
-            <div class="logout-area"><button class="button" id="btnLogout">LOGOUT</button></div>
+            <div class="logo-area">
+                <h2 class="logo">📚 School Attendance</h2>
+            </div>
+            <div class="logout-area">
+                <button class="btnlogout" id="btnLogout">LOGOUT</button>
+            </div>
         </div>
         
         <div class="session-area">
@@ -60,7 +64,7 @@ session_start();
      <div id="overlay" style="display:none;">
         <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;"></div>
         <br />
-        Please wait...
+        <span style="font-size: 16px; margin-top: 15px;">Please wait...</span>
      </div>
 
      <input type="hidden" id="hiddenFacId" value=<?php echo($facid) ?>>
